@@ -1,0 +1,39 @@
+:root {
+  --set-gap: 30px;
+}
+
+.set {
+  display: flex;
+  flex-direction: row;
+  gap: var(--set-gap);
+}
+
+.key {
+  --size: 30px;
+  --border-size: 1px;
+
+  align-items: center;
+  border: var(--border-size) solid black;
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  height: var(--size);
+  position: relative;
+  width: var(--size);
+
+  & + .key::before {
+    --size: 20px;
+
+    align-items: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+    content: "+";
+    display: flex;
+    height: var(--size);
+    justify-content: center;
+    left: calc((-1 * (var(--set-gap) / 2)) + (-1 * (var(--size) / 2)) - var(--border-size));
+    position: absolute;
+    width: var(--size);
+  }
+}
