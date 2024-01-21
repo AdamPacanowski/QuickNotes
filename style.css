@@ -47,3 +47,17 @@
 .label {
   
 }
+
+.list-of-entries {
+  width: 400px; /* TEMPORARY */
+
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-auto-rows: auto;
+  grid-auto-flow: row;
+
+  .keyboard-entry {
+    display: contents;
+  }
+
+}
