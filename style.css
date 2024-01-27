@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
+
 :root {
   --set-gap: 30px;
+}
+
+body {
+  color: #251605;
+  font-family: 'Raleway', sans-serif;
 }
 
 .keyboard-entry {
@@ -36,6 +43,8 @@
       content: "+";
       display: flex;
       height: var(--size);
+      font-weight: 300;
+      font-size: 22px;
       justify-content: center;
       left: calc((-1 * (var(--set-gap) / 2)) + (-1 * (var(--size) / 2)) - var(--border-size));
       position: absolute;
