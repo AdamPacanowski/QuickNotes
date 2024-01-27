@@ -1,15 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
-
 :root {
   --set-gap: 30px;
 }
 
-body {
-  color: #251605;
-  font-family: 'DM Sans', sans-serif;
-}
+/* https://jsfiddle.net/bL3wy5g6/74/ */
 
-.keyboard-entry {
+.keyboardEntry {
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -49,22 +44,4 @@ body {
       width: var(--size);
     }
   }
-}
-
-.label {
-  
-}
-
-.list-of-entries {
-  width: 400px; /* TEMPORARY */
-
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-auto-rows: auto;
-  grid-auto-flow: row;
-
-  .keyboard-entry {
-    display: contents;
-  }
-
 }
