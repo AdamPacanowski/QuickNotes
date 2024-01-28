@@ -6,19 +6,35 @@ import KeyboardEntry from './KeyboardEntry';
 const App: Component = () => {
   return (
     <div class={styles.listOfEntries}>
-      {/* <KeyboardEntry 
+      <KeyboardEntry 
         keys={[['A', 'B']]}
         label="Test"
       />
       <KeyboardEntry 
         keys={[['A', 'B', 'C']]}
         label="Test"
-      /> */}
+      />
       <KeyboardEntry 
         keys={[['A', 'B'], ['C', 'D']]}
         label="Test"
       />
       <KeyboardEntry 
+        keys={[['A', 'B'], ['C', 'D']]}
+        label="Test test test"
+      />
+      <KeyboardEntry
+        keys={[['A', 'B']]}
+        label="Test"
+      />
+      <KeyboardEntry
+        keys={[['A', 'B', 'C']]}
+        label="Test"
+      />
+      <KeyboardEntry
+        keys={[['A', 'B'], ['C', 'D']]}
+        label="Test"
+      />
+      <KeyboardEntry
         keys={[['A', 'B'], ['C', 'D']]}
         label="Test test test"
       />
