@@ -1,27 +1,32 @@
 :root {
   --set-gap: 30px;
+  --key-border-color: #afb3b7;
 }
 
 /* https://jsfiddle.net/bL3wy5g6/74/ */
 
 .keyboardEntry {
+  align-items: center;
   display: flex;
   flex-direction: row;
   gap: 10px;
+
+  /* temp (for grid) */
+  display: contents;
 }
 
 .set {
   display: flex;
   flex-direction: row;
-  gap: var(--set-gap);
+  /* gap: var(--set-gap); */
 
   .key {
     --size: 30px;
     --border-size: 1px;
 
     align-items: center;
-    border: var(--border-size) solid black;
-    border-radius: 2px;
+    border: var(--border-size) solid var(--key-border-color);
+    border-radius: 5px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -29,11 +34,11 @@
     position: relative;
     width: var(--size);
 
-    & + .key::before {
+    /* & + .key::before {
       --size: 20px;
 
       align-items: center;
-      border: 1px solid black;
+      border: 1px solid var(--key-border-color);
       box-sizing: border-box;
       content: "+";
       display: flex;
@@ -42,6 +47,6 @@
       left: calc((-1 * (var(--set-gap) / 2)) + (-1 * (var(--size) / 2)) - var(--border-size));
       position: absolute;
       width: var(--size);
-    }
+    } */
   }
 }

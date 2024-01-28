@@ -14,19 +14,21 @@ const KeyboardEntry: Component<KeyboardEntryProps> = ({
 }: KeyboardEntryProps) => {
   return (
     <div class={styles.keyboardEntry}>
-      <For each={keys}>
-        {(set) => (
-          <div class={styles.set}>
-            <For each={set}>
-              {(key) => (
-                <div class={styles.key}>{key}</div>
-              )}
-            </For>
-          </div>
-        )}
-      </For>
       <div>
         {label}
+      </div>
+      <div>
+        <For each={keys}>
+          {(set) => (
+            <div class={styles.set}>
+              <For each={set}>
+                {(key) => (
+                  <div class={styles.key}>{key}</div>
+                )}
+              </For>
+            </div>
+          )}
+        </For>
       </div>
     </div>
   );
