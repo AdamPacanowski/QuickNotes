@@ -17,7 +17,7 @@ const KeyboardEntry: Component<KeyboardEntryProps> = ({
       <div>
         {label}
       </div>
-      <div>
+      <div class={styles.setfOSets}>
         <For each={keys}>
           {(set) => (
             <div class={styles.set}>
