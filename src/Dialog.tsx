@@ -13,7 +13,7 @@ const Dialog: Component = () => {
     <dialog 
       open={isOpen?.()}
       class={ styles.dialog } ref={dialogRef}>
-      <button onClick={() => dialogRef?.close()}>Close</button>
+      <button onClick={() => context?.closeDialog()}>Close</button>
       <textarea />
       <button>Load</button>
     </dialog>
