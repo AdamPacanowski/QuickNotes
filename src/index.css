@@ -1,7 +1,25 @@
-/* TBD To local font */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+@font-face {
+  font-family: 'Geist';
+  src: url('./src/assets/Geist-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('./src/assets/Geist-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('./src/assets/Geist-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Geist', sans-serif;
   color: #0d1f23;
 }
