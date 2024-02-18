@@ -7,13 +7,15 @@ import FloatingButton from './FloatingButton';
 import { MyContextProvider } from './store';
 
 import 'solid-devtools';
+import ListOfEntries from './ListOfEntries';
 
 const App: Component = () => {
   return (
     <>
       <MyContextProvider>
         <FloatingButton />
-        <Dialog />    
+        <Dialog />
+        <ListOfEntries />
         <div class={styles.listOfEntries}>
           <KeyboardEntry 
             keys={[['A', 'B']]}

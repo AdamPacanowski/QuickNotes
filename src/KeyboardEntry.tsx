@@ -12,6 +12,9 @@ const KeyboardEntry: Component<KeyboardEntryProps> = ({
   keys,
   label
 }: KeyboardEntryProps) => {
+  console.log('1',  keys,
+    label)
+
   return (
     <div class={styles.keyboardEntry}>
       <div>

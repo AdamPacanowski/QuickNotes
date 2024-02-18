@@ -1,35 +1,42 @@
-import { Accessor, ParentComponent, createContext, createSignal, useContext } from 'solid-js';
+import { ParentComponent, createContext, useContext } from 'solid-js';
 import { createStore } from 'solid-js/store'; 
+
+interface KeyboardEntry {
+  keys: Array<Array<string>>;
+  label: string;
+}
+
+export type KeyboardEntries = Array<KeyboardEntry>;
 
 interface MyStore {
   isDialogOpen: boolean;
+  keyboardEntries: KeyboardEntries; 
 }
 
 interface MyContext {
-  // dialogStatus: {
   store: MyStore,
-    openDialog: () => void,
-    closeDialog: () => void,
-  // }
+  openDialog: () => void,
+  closeDialog: () => void,
+  loadKeyboardEntries: (keyboardEntries: KeyboardEntries) => void;
 }
 
 const MyContext = createContext<MyContext>();
 
 const MyContextProvider: ParentComponent = (props) => {
-  // const [state, setState] = createSignal<boolean>(false);
   const [store, setStore] = createStore<MyStore>({
     isDialogOpen: false,
+    keyboardEntries: [],
   });
-  // console.log('state2',state)
+
   const storeMethods = {
     openDialog() {
-      console.log('xxx')
-      // setState(true)
       setStore("isDialogOpen", true);
     },
     closeDialog() {
-      // setState(false)
       setStore("isDialogOpen", false);
+    },
+    loadKeyboardEntries(keyboardEntries: KeyboardEntries) {
+      setStore("keyboardEntries", keyboardEntries);
     }
   };
 
