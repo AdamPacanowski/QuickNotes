@@ -1,13 +1,13 @@
 import { Accessor, ParentComponent, createContext, createSignal, useContext } from 'solid-js';
 import { createStore } from 'solid-js/store'; 
 
-interface Store {
+interface MyStore {
   isDialogOpen: boolean;
 }
 
 interface MyContext {
   // dialogStatus: {
-    isDialogOpen: Accessor<boolean>,
+  store: MyStore,
     openDialog: () => void,
     closeDialog: () => void,
   // }
@@ -16,26 +16,27 @@ interface MyContext {
 const MyContext = createContext<MyContext>();
 
 const MyContextProvider: ParentComponent = (props) => {
-  const [state, setState] = createSignal<boolean>(false);
-  console.log('state2',state)
-  const dialogStatus = {
-    isDialogOpen: state,
+  // const [state, setState] = createSignal<boolean>(false);
+  const [store, setStore] = createStore<MyStore>({
+    isDialogOpen: false,
+  });
+  // console.log('state2',state)
+  const storeMethods = {
     openDialog() {
       console.log('xxx')
-      setState(true)
-      // setState("isDialogOpen", true);
-      console.log('sss', state);
+      // setState(true)
+      setStore("isDialogOpen", true);
     },
     closeDialog() {
-      setState(false)
+      // setState(false)
+      setStore("isDialogOpen", false);
     }
   };
 
   return (
     <MyContext.Provider value={{
-      isDialogOpen: state,
-      openDialog: dialogStatus.openDialog,
-      closeDialog: dialogStatus.closeDialog,
+      store,
+      ...storeMethods,
     }}>
       { props.children }
     </MyContext.Provider>

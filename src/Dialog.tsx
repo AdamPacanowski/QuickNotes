@@ -1,17 +1,16 @@
 import styles from './KeyboardEntry.module.css';
 
-import { useContext, type Component } from 'solid-js';
+import { createEffect, type Component } from 'solid-js';
 
 import { useMyContext } from './store';
 
 const Dialog: Component = () => {
   const context = useMyContext();
-  const isOpen = context?.isDialogOpen;
-  console.log('dialog isOpen', isOpen?.());
+
   let dialogRef: HTMLDialogElement | undefined;
   return (
     <dialog 
-      open={isOpen?.()}
+      open={context?.store.isDialogOpen} /* Variable assignment before DOESN'T work! */
       class={ styles.dialog } ref={dialogRef}>
       <button onClick={() => context?.closeDialog()}>Close</button>
       <textarea />
