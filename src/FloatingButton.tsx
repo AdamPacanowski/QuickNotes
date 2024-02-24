@@ -4,12 +4,18 @@ import {  useMyContext } from './store';
 
 const FloatingButton: Component = () => {
   const context = useMyContext();
-  const onClick = () => context?.openDialog();
-  console.log('onClick', onClick)
+  const openDialog = () => context?.openDialog();
+  const clearKeyboardEntries = () => context?.clearKeyboardEntries();
+
   return (
-    <button onClick={onClick}>
-      Load data
-    </button>
+    <>    
+      <button onClick={openDialog}>
+        Load data
+      </button>
+      <button onClick={clearKeyboardEntries}>
+        Clear data
+      </button>
+    </>
   );
 };
 

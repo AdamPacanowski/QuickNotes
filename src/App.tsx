@@ -30,7 +30,7 @@ const App: Component = () => {
             label="Test"
           />
           <KeyboardEntry 
-            keys={[['A', 'B'], ['C', 'D']]}
+            keys={[['A', 'B'], ['C', 'D'], ['C', 'D']]}
             label="Test test test"
           />
           <KeyboardEntry

@@ -10,6 +10,8 @@ export const loadData = (
     const keyboardEntries = object as KeyboardEntries;
 
     injectData?.(keyboardEntries);
+
+    localStorage.setItem('keyboardEntries', JSON.stringify(keyboardEntries));
   }
   catch (e) {
     alert('Problem with loading data');

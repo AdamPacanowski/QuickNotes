@@ -1,4 +1,4 @@
-import { ParentComponent, createContext, useContext } from 'solid-js';
+import { ParentComponent, createContext, createEffect, useContext } from 'solid-js';
 import { createStore } from 'solid-js/store'; 
 
 interface KeyboardEntry {
@@ -18,6 +18,7 @@ interface MyContext {
   openDialog: () => void,
   closeDialog: () => void,
   loadKeyboardEntries: (keyboardEntries: KeyboardEntries) => void;
+  clearKeyboardEntries: () => void;
 }
 
 const MyContext = createContext<MyContext>();
@@ -37,8 +38,23 @@ const MyContextProvider: ParentComponent = (props) => {
     },
     loadKeyboardEntries(keyboardEntries: KeyboardEntries) {
       setStore("keyboardEntries", keyboardEntries);
+    },
+    clearKeyboardEntries() {
+      setStore("keyboardEntries", []);
     }
   };
+
+  createEffect(() => {
+    const keyboardEntriesFromLocalStorage = localStorage.getItem('keyboardEntries');
+
+    if (keyboardEntriesFromLocalStorage) {
+      storeMethods.loadKeyboardEntries(
+        JSON.parse(keyboardEntriesFromLocalStorage)
+      );
+
+      console.log('Data from local storage loaded.');
+    }
+  });
 
   return (
     <MyContext.Provider value={{

@@ -6,9 +6,6 @@
   flex-direction: row;
   gap: 10px;
 
-  /* temp (for grid) */
-  /* display: contents; */
-
   display: grid;
   grid-template-columns: subgrid;
   grid-column: span 2;

@@ -5,5 +5,5 @@
 
   grid-auto-flow: column;
   grid-template-rows: repeat(auto-fill, minmax(40px, auto));
-  grid-template-columns: repeat(auto-fit, auto minmax(50px, auto));
+  grid-template-columns: repeat(auto-fit, 100px minmax(100px, auto))
 }
