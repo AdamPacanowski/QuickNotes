@@ -48,6 +48,8 @@ jobs:
         with:
           name: my-artifact
           path: 'dist'
+      - name: ls
+        run: ls -loha
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
