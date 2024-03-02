@@ -1,6 +1,8 @@
+import styles from './FloatingButton.module.css';
+
 import { useContext, type Component } from 'solid-js';
 
-import {  useMyContext } from './store';
+import { useMyContext } from './store';
 
 const FloatingButton: Component = () => {
   const context = useMyContext();
@@ -9,12 +11,12 @@ const FloatingButton: Component = () => {
 
   return (
     <>    
-      <button onClick={openDialog}>
+      <button class={styles.floatingButton} onClick={openDialog}>
         Load data
       </button>
-      <button onClick={clearKeyboardEntries}>
+      {/* <button onClick={clearKeyboardEntries}>
         Clear data
-      </button>
+      </button> */}
     </>
   );
 };

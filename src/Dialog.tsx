@@ -1,6 +1,6 @@
 import styles from './Dialog.module.css';
 
-import { type Component } from 'solid-js';
+import { type Component, onMount, createEffect } from 'solid-js';
 
 import { useMyContext } from './store';
 import { loadData } from './dataLoader';
@@ -19,6 +19,12 @@ const Dialog: Component = () => {
   
   let dialogRef: HTMLDialogElement | undefined;
   let textareaRef: HTMLTextAreaElement | undefined;
+
+  createEffect(() => {
+    if (context?.store.isDialogOpen && textareaRef) {
+      textareaRef.value = JSON.stringify(context.store.keyboardEntries);
+    }
+  })
 
   const onLoadButtonClick = () => {
     const text = textareaRef?.value;
