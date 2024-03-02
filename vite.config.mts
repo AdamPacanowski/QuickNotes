@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     VitePWA({ 
       registerType: 'autoUpdate',
-      includeAssets: ['src/assets/9057215_keyboard_icon.svg'],
+      includeAssets: ['/9057215_keyboard_icon.svg'],
       manifest: {
         name: 'Keyboard shortcuts',
         short_name: 'Keyboard',
@@ -15,7 +15,7 @@ export default defineConfig({
         theme_color: '#ffffff',
         icons: [
           {
-            "src": "src/assets/9057215_keyboard_icon.svg",
+            "src": "/9057215_keyboard_icon.svg",
             "sizes": "48x48 72x72 96x96 128x128 256x256 512x512",
             "type": "image/svg+xml",
             "purpose": "any"
@@ -25,7 +25,6 @@ export default defineConfig({
       devOptions: {
         enabled: true,
       },
-      buildBase: '/QuickNotes/'
     }),
     devtools(),
     solidPlugin()
@@ -36,5 +35,4 @@ export default defineConfig({
   build: {
     target: 'esnext',
   },
-  base: '/QuickNotes/'
 });

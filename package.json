@@ -7,6 +7,7 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
+    "build:github-pages": "vite build --base=/QuickNotes/",
     "serve": "vite preview"
   },
   "license": "MIT",
