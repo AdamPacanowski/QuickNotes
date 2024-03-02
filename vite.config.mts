@@ -5,10 +5,6 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
   plugins: [
-    /* 
-    Uncomment the following line to enable solid-devtools.
-    For more info see https://github.com/thetarnav/solid-devtools/tree/main/packages/extension#readme
-    */
     VitePWA({ 
       registerType: 'autoUpdate',
       includeAssets: ['src/assets/9057215_keyboard_icon.svg'],
@@ -28,7 +24,8 @@ export default defineConfig({
       },
       devOptions: {
         enabled: true,
-      }
+      },
+      buildBase: '/QuickNotes/'
     }),
     devtools(),
     solidPlugin()
