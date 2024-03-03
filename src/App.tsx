@@ -16,40 +16,6 @@ const App: Component = () => {
         <FloatingButton />
         <Dialog />
         <ListOfEntries />
-        <div class={styles.listOfEntries}>
-          <KeyboardEntry 
-            keys={[['A', 'B']]}
-            label="Test"
-          />
-          <KeyboardEntry 
-            keys={[['A', 'B', 'C']]}
-            label="Test"
-          />
-          <KeyboardEntry 
-            keys={[['A', 'B'], ['C', 'D']]}
-            label="Test"
-          />
-          <KeyboardEntry 
-            keys={[['A', 'B'], ['C', 'D'], ['C', 'D']]}
-            label="Test test test"
-          />
-          <KeyboardEntry
-            keys={[['A', 'B']]}
-            label="Test"
-          />
-          <KeyboardEntry
-            keys={[['A', 'B', 'C']]}
-            label="Test"
-          />
-          <KeyboardEntry
-            keys={[['A', 'B'], ['C', 'D']]}
-            label="Test"
-          />
-          <KeyboardEntry
-            keys={[['A', 'B'], ['C', 'D']]}
-            label="Test test test"
-          />
-        </div>
       </MyContextProvider>
     </>
   );

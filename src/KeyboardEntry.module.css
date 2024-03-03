@@ -9,6 +9,10 @@
   display: grid;
   grid-template-columns: subgrid;
   grid-column: span 2;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  /* padding: 8px; */
 }
 
 .setfOSets {
@@ -33,6 +37,7 @@
 
   .key {
     --size: 30px;
+    --horizontal-padding: 5px;
     --border-size: 1px;
     --key-background-color: white;
     --key-border-color: #e4e4e7;
@@ -48,7 +53,7 @@
     height: var(--size);
     min-width: var(--size);
     position: relative;
-    width: var(--size);
+    padding: 0 var(--horizontal-padding);
 
     /* & + .key::before {
       --size: 20px;

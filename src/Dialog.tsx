@@ -8,8 +8,29 @@ import { loadData } from './dataLoader';
 /*
 [
 {
-  "keys": [["A", "B"]],
-  "label": "Test xx"
+  "keys": [["Ctrl", "K"], ["Ctrl", "M"]],
+  "label": "Maksymalizacja edytora grupy",
+  "code": "workbench.action.toggleMaximizedPanel"
+},
+{
+  "keys": [["Ctrl", "1"]],
+  "label": "Aktywacja pierwszej grupy edytora"
+},
+{
+  "keys": [["Ctrl", "2"]],
+  "label": "Aktywacja drugiej grupy edytora"
+},
+{
+  "keys": [["Ctrl", "0"]],
+  "label": "Aktywacja sidebaru"
+},
+{
+  "keys": [["Ctrl", "K"], ["Ctrl", "L"]],
+  "label": "Wywołaj tooltip"
+},
+{
+  "keys": [["Ctrl", "."]],
+  "label": "Otwórz menu 'Quick fixów'"
 }
 ]
 */
