@@ -12,7 +12,7 @@
 
   border: 1px solid #e5e7eb;
   border-radius: 8px;
-  /* padding: 8px; */
+  padding: 0 10px;
 }
 
 .setfOSets {
@@ -54,20 +54,5 @@
     min-width: var(--size);
     position: relative;
     padding: 0 var(--horizontal-padding);
-
-    /* & + .key::before {
-      --size: 20px;
-
-      align-items: center;
-      border: 1px solid var(--key-border-color);
-      box-sizing: border-box;
-      content: "+";
-      display: flex;
-      height: var(--size);
-      justify-content: center;
-      left: calc((-1 * (var(--set-gap) / 2)) + (-1 * (var(--size) / 2)) - var(--border-size));
-      position: absolute;
-      width: var(--size);
-    } */
   }
 }
