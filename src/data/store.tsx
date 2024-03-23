@@ -73,4 +73,5 @@ const useMyContext = () => {
 export {
   MyContextProvider,
   useMyContext,
+  MyContext,
 };
