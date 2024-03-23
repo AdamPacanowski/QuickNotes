@@ -2,7 +2,7 @@ import styles from './FloatingButton.module.css';
 
 import { useContext, type Component } from 'solid-js';
 
-import { useMyContext } from './store';
+import { useMyContext } from '../../data/store';
 
 const FloatingButton: Component = () => {
   const context = useMyContext();

@@ -1,0 +1,53 @@
+{
+  "clientRemote": "https://github.com/AdamPacanowski/QuickNotes",
+  "gitRemote": "https://github.com/AdamPacanowski/QuickNotes",
+  "gitSha": "5132a5b3a33537ea5be331bc225459456935e275",
+  "treeEntries": [
+    {
+      "label": "Lista wpisów",
+      "entryType": 1,
+      "author": "Adam Pacanowski",
+      "locations": [
+        {
+          "path": "src\\components\\ListOfEntries\\ListOfEntries.tsx",
+          "startLine": 6,
+          "endLine": 6,
+          "label": "",
+          "description": ""
+        }
+      ],
+      "details": {
+        "severity": "",
+        "difficulty": "",
+        "type": "",
+        "description": "",
+        "exploit": "",
+        "recommendation": "Short term, \nLong term, \n"
+      }
+    },
+    {
+      "label": "Pływający przycisk",
+      "entryType": 1,
+      "author": "Adam Pacanowski",
+      "locations": [
+        {
+          "path": "src\\components\\FloatingButton\\FloatingButton.tsx",
+          "startLine": 6,
+          "endLine": 6,
+          "label": "",
+          "description": ""
+        }
+      ],
+      "details": {
+        "severity": "",
+        "difficulty": "",
+        "type": "",
+        "description": "",
+        "exploit": "",
+        "recommendation": "Short term, \nLong term, \n"
+      }
+    }
+  ],
+  "auditedFiles": [],
+  "resolvedEntries": []
+}

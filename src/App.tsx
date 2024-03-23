@@ -1,13 +1,10 @@
-import styles from './App.module.css';
-
 import type { Component } from 'solid-js';
-import KeyboardEntry from './KeyboardEntry';
-import Dialog from './Dialog';
-import FloatingButton from './FloatingButton';
-import { MyContextProvider } from './store';
+import Dialog from './components/Dialog/Dialog';
+import FloatingButton from './components/FloatingButton/FloatingButton';
+import { MyContextProvider } from './data/store';
 
 import 'solid-devtools';
-import ListOfEntries from './ListOfEntries';
+import ListOfEntries from './components/ListOfEntries/ListOfEntries';
 
 const App: Component = () => {
   return (

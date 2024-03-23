@@ -2,8 +2,8 @@ import styles from './Dialog.module.css';
 
 import { type Component, onMount, createEffect } from 'solid-js';
 
-import { useMyContext } from './store';
-import { loadData } from './dataLoader';
+import { useMyContext } from '../../data/store';
+import { loadData } from '../../data/dataLoader';
 
 /*
 [

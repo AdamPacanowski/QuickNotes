@@ -1,9 +1,8 @@
-import styles from './App.module.css';
+import styles from './ListOfEntries.module.css';
 
 import { For, type Component } from 'solid-js';
-import KeyboardEntry from './KeyboardEntry';
-import { useMyContext } from './store';
-import { unwrap } from 'solid-js/store';
+import KeyboardEntry from '../KeyboardEntry/KeyboardEntry';
+import { useMyContext } from '../../data/store';
 
 const ListOfEntries: Component = () => {
   const context = useMyContext();
