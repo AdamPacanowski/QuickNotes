@@ -1,6 +1,6 @@
 import styles from './FloatingButton.module.css';
 
-import { useContext, type Component } from 'solid-js';
+import { type Component } from 'solid-js';
 
 import { useMyContext } from '../../data/store';
 

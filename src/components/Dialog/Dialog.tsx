@@ -58,7 +58,7 @@ const Dialog: Component = () => {
   }
 
   return (
-    <dialog 
+    <dialog
       open={context?.store.isDialogOpen} /* Variable assignment before DOESN'T work! */
       class={ styles.dialog } ref={dialogRef}>
       <button onClick={() => context?.closeDialog()}>Close</button>
