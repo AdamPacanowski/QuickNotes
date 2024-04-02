@@ -8,7 +8,10 @@ const ListOfEntries: Component = () => {
   const context = useMyContext();
 
   return (
-    <div class={styles.listOfEntries}>
+    <div 
+      class={styles.listOfEntries}
+      role="table"
+    >
       <For each={context?.store.keyboardEntries} fallback={"nothing"}>
         {(keyboardEntry) => (
           <KeyboardEntry
