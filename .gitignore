@@ -132,3 +132,11 @@ dist
 
 # vite pwa
 dev-dist
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
