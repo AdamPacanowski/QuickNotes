@@ -9,11 +9,13 @@
     "build": "vite build",
     "build:github-pages": "vite build --base=/QuickNotes/",
     "serve": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "test:coverage": "npm test -- --coverage"
   },
   "license": "MIT",
   "devDependencies": {
     "@solidjs/testing-library": "^0.8.6",
+    "@vitest/coverage-v8": "^1.4.0",
     "jsdom": "^24.0.0",
     "solid-devtools": "^0.29.2",
     "typescript": "^5.3.3",
