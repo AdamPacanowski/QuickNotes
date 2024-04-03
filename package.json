@@ -12,7 +12,8 @@
     "test": "vitest",
     "test:coverage": "npm test -- --coverage",
     "test-ct": "playwright test -c playwright-ct.config.ts",
-    "test-ct:update-snapshots": "npm run test-ct -- --update-snapshots"
+    "test-ct:update-snapshots": "npm run test-ct -- --update-snapshots",
+    "test-ct:install-browsers": "npx playwright install --with-deps"
   },
   "license": "MIT",
   "devDependencies": {
