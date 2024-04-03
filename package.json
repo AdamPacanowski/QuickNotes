@@ -12,7 +12,7 @@
     "test": "vitest",
     "test:coverage": "npm test -- --coverage",
     "test-ct": "playwright test -c playwright-ct.config.ts",
-    "test-ct:chrome": "npm run test-ct -- --project=chromium"
+    "test-ct:update-snapshots": "npm run test-ct -- --update-snapshots"
   },
   "license": "MIT",
   "devDependencies": {

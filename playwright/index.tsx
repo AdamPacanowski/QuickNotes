@@ -1,14 +1,23 @@
 // Import styles, initialize component theme here.
-// import '../src/common.css';
+import '../src/index.css';
 import { beforeMount } from '@playwright/experimental-ct-solid/hooks';
-import { MyContextProvider } from '../src/data/store';
+import { MyContext } from '../src/data/store';
 
 export type HooksConfig = {};
 
-beforeMount<HooksConfig>(async ({ App }) => {
+beforeMount<HooksConfig>(async ({ App, hooksConfig }) => {
   return (
-    <MyContextProvider>
+    <MyContext.Provider value={{
+      store: {
+        keyboardEntries: (hooksConfig as any)?.keyboardEntries,
+        isDialogOpen: false,
+      },
+      clearKeyboardEntries: () => {},
+      closeDialog: () => {},
+      loadKeyboardEntries: () => {},
+      openDialog: () => {},
+    }}>
       <App />
-    </MyContextProvider>
+    </MyContext.Provider>
   );
 });
