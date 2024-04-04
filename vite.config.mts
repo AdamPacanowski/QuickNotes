@@ -38,4 +38,7 @@ export default defineConfig({
   build: {
     target: 'esnext',
   },
+  test: {
+    include: ['**/*.test.[jt]s?(x)'],
+  }
 });
