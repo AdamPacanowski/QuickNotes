@@ -1,0 +1,58 @@
+/* https://jsfiddle.net/bL3wy5g6/74/ */
+
+.keyboardEntry {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: span 2;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0 10px;
+}
+
+.setfOSets {
+  --set-of-sets-gap: 10px;
+
+  display: flex;
+  gap: var(--set-of-sets-gap);
+}
+
+.set {
+  --set-background-color: #f4f4f5;
+  --set-border-radius: 4px;
+  --set-padding: 4px;
+  --set-row-gap: 5px;
+
+  background-color: var(--set-background-color);
+  border-radius: var(--set-border-radius);
+  display: flex;
+  flex-direction: row;
+  gap: var(--set-row-gap);
+  padding: var(--set-padding);
+
+  .key {
+    --size: 30px;
+    --horizontal-padding: 5px;
+    --border-size: 1px;
+    --key-background-color: white;
+    --key-border-color: #e4e4e7;
+    --key-border-radius: 6px;
+
+    align-items: center;
+    background-color: var(--key-background-color);
+    border: var(--border-size) solid var(--key-border-color);
+    border-radius: var(--key-border-radius);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    height: var(--size);
+    min-width: var(--size);
+    position: relative;
+    padding: 0 var(--horizontal-padding);
+  }
+}

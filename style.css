@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+
+:root {
+  --set-gap: 30px;
+}
+
+body {
+  background-color: #afb3b7;
+  color: #0d1f23;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.keyboard-entry {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.set {
+  display: flex;
+  flex-direction: row;
+  gap: var(--set-gap);
+
+  .key {
+    --size: 30px;
+    --border-size: 1px;
+
+    align-items: center;
+    border: var(--border-size) solid black;
+    border-radius: 2px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    height: var(--size);
+    position: relative;
+    width: var(--size);
+
+    & + .key::before {
+      --size: 20px;
+
+      align-items: center;
+      border: 1px solid black;
+      box-sizing: border-box;
+      content: "+";
+      display: flex;
+      height: var(--size);
+      justify-content: center;
+      left: calc((-1 * (var(--set-gap) / 2)) + (-1 * (var(--size) / 2)) - var(--border-size));
+      position: absolute;
+      width: var(--size);
+    }
+  }
+}
+
+.label {
+  
+}
+
+.list-of-entries {
+  width: 400px; /* TEMPORARY */
+
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-auto-rows: auto;
+  grid-auto-flow: row;
+
+  .keyboard-entry {
+    display: contents;
+  }
+
+}

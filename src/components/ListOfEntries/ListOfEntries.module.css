@@ -1,0 +1,11 @@
+.listOfEntries {
+  height: 250px;
+
+  display: grid;
+
+  grid-auto-flow: column;
+  grid-template-rows: repeat(auto-fill, minmax(60px, auto));
+
+  /* row-gap: 16px; */
+  gap: 8px;
+}

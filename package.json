@@ -1,0 +1,38 @@
+{
+  "name": "vite-template-solid",
+  "version": "0.0.0",
+  "description": "",
+  "module": "module",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "build:github-pages": "vite build --base=/QuickNotes/",
+    "serve": "vite preview",
+    "test": "vitest",
+    "test:coverage": "npm test -- --coverage",
+    "test-ct": "playwright test -c playwright-ct.config.ts",
+    "test-ct:update-snapshots": "npm run test-ct -- --update-snapshots",
+    "test-ct:install-browsers": "npx playwright install --with-deps"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/experimental-ct-react": "^1.42.1",
+    "@playwright/experimental-ct-solid": "^1.42.1",
+    "@solidjs/testing-library": "^0.8.6",
+    "@types/node": "^20.12.2",
+    "@vitest/coverage-v8": "^1.4.0",
+    "jsdom": "^24.0.0",
+    "solid-devtools": "^0.29.2",
+    "typescript": "^5.3.3",
+    "unplugin-fonts": "^1.1.1",
+    "vite": "^5.0.11",
+    "vite-plugin-pwa": "^0.19.0",
+    "vite-plugin-solid": "^2.8.2",
+    "vitest": "^1.4.0"
+  },
+  "dependencies": {
+    "geist": "^1.2.2",
+    "solid-js": "^1.8.11"
+  }
+}
