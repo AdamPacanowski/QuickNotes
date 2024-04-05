@@ -2,7 +2,7 @@ name: Playwright tests
 on:
   workflow_dispatch:
 jobs:
-  test:
+  playwright-tests:
     timeout-minutes: 60
     runs-on: windows-latest
     steps:
